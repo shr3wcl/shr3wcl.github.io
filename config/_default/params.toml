@@ -55,7 +55,8 @@ defaultBackgroundImage = "background.png"
     showWordCount = true
     showZenMode = false
     heroStyle = "background"
-    showRelatedContent = false
+    showRelatedContent = true
+    relatedContentLimit = 3
 
 [list]
     showHero = true

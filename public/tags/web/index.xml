@@ -2,22 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Shr3wd</title>
-    <link>//localhost:1313/tags/web/</link>
+    <link>http://localhost:1313/tags/web/</link>
     <description>Recent content in Web on Shr3wd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>tripm2112@gmail.com (Shr3wcl)</managingEditor>
     <webMaster>tripm2112@gmail.com (Shr3wcl)</webMaster>
     <copyright>© 2024 Shr3wcl</copyright>
-    <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ASCIS 2024 (Final)</title>
-      <link>//localhost:1313/posts/myfirstpost/</link>
+      <link>http://localhost:1313/posts/ascis-2024-final-jeopardy/</link>
       <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
       <author>tripm2112@gmail.com (Shr3wcl)</author>
-      <guid>//localhost:1313/posts/myfirstpost/</guid>
+      <guid>http://localhost:1313/posts/ascis-2024-final-jeopardy/</guid>
       <description>ASCIS CTF 2024 Final Writeup</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/myfirstpost/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ascis-2024-final-jeopardy/feature.png" />
+    </item>
+    
+    <item>
+      <title>DDC 2024 (Qualify)</title>
+      <link>http://localhost:1313/posts/ddc-2024/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      <author>tripm2112@gmail.com (Shr3wcl)</author>
+      <guid>http://localhost:1313/posts/ddc-2024/</guid>
+      <description>Digital Dragon CTF 2024 Qualify Writeup</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ddc-2024/feature.png" />
+    </item>
+    
+    <item>
+      <title>Web Goat Writeup</title>
+      <link>http://localhost:1313/posts/webgoat/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <author>tripm2112@gmail.com (Shr3wcl)</author>
+      <guid>http://localhost:1313/posts/webgoat/</guid>
+      <description>Web Goat Writeup</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/webgoat/feature.png" />
     </item>
     
   </channel>
