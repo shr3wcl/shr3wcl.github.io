@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web, PWN, Reverse, Crypto,  on Shr3wd</title>
+    <link>//localhost:1313/tags/web-pwn-reverse-crypto-/</link>
+    <description>Recent content in Web, PWN, Reverse, Crypto,  on Shr3wd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>tripm2112@gmail.com (Shr3wcl)</managingEditor>
+    <webMaster>tripm2112@gmail.com (Shr3wcl)</webMaster>
+    <copyright>© 2024 Shr3wcl</copyright>
+    <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/web-pwn-reverse-crypto-/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Molecon2024 [Ducts] - multiple producers, single consumer went wrong</title>
+      <link>//localhost:1313/posts/myfirstpost/</link>
+      <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
+      <author>tripm2112@gmail.com (Shr3wcl)</author>
+      <guid>//localhost:1313/posts/myfirstpost/</guid>
+      <description>Ducts Molecon CTF 2024 Writeup</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/myfirstpost/feature.png" />
+    </item>
+    
+  </channel>
+</rss>
