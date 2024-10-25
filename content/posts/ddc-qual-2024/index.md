@@ -12,10 +12,10 @@ authors:
 ---
 ## Lời mở đầu
 
-Năm nay, giải rồng điện tử trở lại. Team mình là đội nhà nên phải gắng thi đấu hết sứ (áp lực sân nhà cũng như áp lực của mấy thầy :<)
-Năm nay mình có thể thấy được, giải đã ổn hơn năm trước kha khá. Tuy nhiên vẫn có quá nhiều thứ làm mình phải thốt lên: Bullsh*t.
-Bài này mình sẽ viết về Writeup RE, PWN, Web ở vòng loại của Rồng lộ*.
-Mình văn vở khá dở cũng như kỹ thuật còn non nớt, mọi người đọc xong vui lòng ném đá nhẹ nhẹ và góp ý cho mình nhé ^^
+- Năm nay, giải rồng điện tử trở lại. Team mình là đội nhà nên phải gắng thi đấu hết sứ (áp lực sân nhà cũng như áp lực của mấy thầy :<)
+- Năm nay mình có thể thấy được, giải đã ổn hơn năm trước kha khá. Tuy nhiên vẫn có quá nhiều thứ làm mình phải thốt lên: Bullsh*t.
+- Bài này mình sẽ viết về Writeup RE, PWN, Web ở vòng loại của Rồng lộ*.
+- Mình văn vở khá dở cũng như kỹ thuật còn non nớt, mọi người đọc xong vui lòng ném đá nhẹ nhẹ và góp ý cho mình nhé ^^
 
 ## RE
 
@@ -356,8 +356,8 @@ r.interactive()
 
 ### Overflowed
 
-Bài này được cấp cho một file Docker và một chương trình nhị phân
-Mình **checksec** nó thì nhận được kết quả như sau:
+- Bài này được cấp cho một file Docker và một chương trình nhị phân
+- Mình **checksec** nó thì nhận được kết quả như sau:
 
 ![alt text](image-3.png)
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50976&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="en" />
@@ -15,7 +15,7 @@
   <meta name="keywords" content="Web, PWN, Reverse, Crypto, Forensic, " />
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/ascis-2024-final-jeopardy/" />
+  <link rel="canonical" href="http://localhost:50976/posts/ascis-2024-final-jeopardy/" />
   
   
   
@@ -66,7 +66,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/posts/ascis-2024-final-jeopardy/">
+  <meta property="og:url" content="http://localhost:50976/posts/ascis-2024-final-jeopardy/">
   <meta property="og:site_name" content="Shr3wd">
   <meta property="og:title" content="ASCIS 2024 (Final)">
   <meta property="og:description" content="ASCIS CTF 2024 Final Writeup">
@@ -80,11 +80,11 @@
     <meta property="article:tag" content="Reverse">
     <meta property="article:tag" content="Crypto">
     <meta property="article:tag" content="Forensic">
-    <meta property="og:image" content="http://localhost:1313/posts/ascis-2024-final-jeopardy/feature.png">
+    <meta property="og:image" content="http://localhost:50976/posts/ascis-2024-final-jeopardy/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/ascis-2024-final-jeopardy/feature.png">
+  <meta name="twitter:image" content="http://localhost:50976/posts/ascis-2024-final-jeopardy/feature.png">
   <meta name="twitter:title" content="ASCIS 2024 (Final)">
   <meta name="twitter:description" content="ASCIS CTF 2024 Final Writeup">
 
@@ -99,7 +99,7 @@
     "description": "ASCIS CTF 2024 Final Writeup",
     "abstract": "ASCIS CTF 2024 Final Writeup",
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/ascis-2024-final-jeopardy\/",
+    "url" : "http:\/\/localhost:50976\/posts\/ascis-2024-final-jeopardy\/",
     "author" : {
       "@type": "Person",
       "name": "Shr3wcl"
@@ -113,7 +113,7 @@
     "keywords": ["Web","PWN","Reverse","Crypto","Forensic"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "867"
+    "wordCount": "1541"
   }]
   </script>
 
@@ -181,6 +181,8 @@
   
   <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    
     
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
@@ -572,7 +574,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-20T00:00:00&#43;00:00">20 October 2024</time><span class="px-2 text-primary-500">&middot;</span><span>867 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+  <time datetime="2024-10-20T00:00:00&#43;00:00">20 October 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1541 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
   
 
   
@@ -816,6 +818,11 @@
         <li><a href="#docman"><strong>DocMan</strong></a></li>
       </ul>
     </li>
+    <li><a href="#reverse">Reverse</a>
+      <ul>
+        <li><a href="#calculator">Calculator</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -839,6 +846,11 @@
         <li><a href="#rootme-bro"><strong>Rootme bro</strong></a></li>
         <li><a href="#train-to-server"><strong>Train to server</strong></a></li>
         <li><a href="#docman"><strong>DocMan</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#reverse">Reverse</a>
+      <ul>
+        <li><a href="#calculator">Calculator</a></li>
       </ul>
     </li>
   </ul>
@@ -885,6 +897,23 @@
 
         <div class="article-content max-w-prose mb-20">
           
+
+<h1 class="relative group">Lời mở đầu 
+    <div id="l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#l%E1%BB%9Di-m%E1%BB%9F-%C4%91%E1%BA%A7u" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<ul>
+<li>Giải SVATTT năm nay là năm thứ 2 mình tham gia. Nhờ may mắn và cố gắng của mọi người, team mình được đánh bảng A (Attack - Defense) ở vòng Chung khảo tại MTA (Mặc dù rất thích đánh Jeopardy ở bảng B :&lt;)</li>
+<li>Tuy nhiên, với khát khao được chơi Jeopardy, mình đã nhờ thành viên bảng B giữ đề để về ngâm cứu :&gt;</li>
+<li>Mình sẽ cố gắng solve hết tất cả các bài (hy vọng là được ^^)</li>
+</ul>
+
 
 <h2 class="relative group">Misc 
     <div id="misc" class="anchor"></div>
@@ -1091,6 +1120,178 @@
 <li>Check file magic: ở đây đoạn code sẽ check 8 byte đầu của file có khớp với các byte mà dev lập trình sẵn hay không ⇒ Có thể bypass bằng burp</li>
 </ul>
 <p>⇒ Tổng hợp lại tất cả, lúc này chỉ cần upload một file php với các lớp bypass trên thì có thể RCE được server và đọc được flag.</p>
+
+
+<h2 class="relative group">Reverse 
+    <div id="reverse" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#reverse" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Calculator 
+    <div id="calculator" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#calculator" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Bài này được cung cấp một file ASM =&gt; Hiểu logic mã asm hoặc chuyển thành một ngôn ngữ khác để dễ phân tích hơn.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nl">fx:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">push</span>    <span class="no">rbp</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rbp</span><span class="p">,</span> <span class="no">rsp</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">],</span> <span class="no">rdi</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">70</span>                         <span class="c1"># F
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">76</span>                         <span class="c1"># L
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span> 
+</span></span><span class="line"><span class="cl">        <span class="no">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">eax</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">130</span>                        <span class="c1"># A
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">71</span>                         <span class="c1"># G
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">16</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">123</span>                        <span class="c1"># {
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">95</span>                         <span class="c1"># _
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">24</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">sub</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">75</span>                         <span class="c1"># M
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ja</span>      <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">28</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">48</span>                         <span class="c1"># &gt;= 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jle</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">32</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>            <span class="c1"># &gt;= d
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">jle</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">28</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">edx</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">32</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">edx</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">152</span>                       <span class="c1"># 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">36</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">98</span>                        <span class="c1"># b
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">40</span>                     
+</span></span><span class="line"><span class="cl">        <span class="no">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">test</span>    <span class="no">eax</span><span class="p">,</span> <span class="no">eax</span>                      <span class="c1"># != 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">je</span>      <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">44</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">48</span>                       <span class="c1"># 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">48</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">110</span>                      <span class="c1"># n
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">52</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">95</span>                       <span class="c1"># _
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">56</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">83</span>                       <span class="c1"># S
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">60</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">104</span>                      <span class="c1"># h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">64</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">49</span>                       <span class="c1"># 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">68</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">110</span>                      <span class="c1"># n
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">72</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">105</span>                      <span class="c1"># i
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">76</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">110</span>                      <span class="c1"># n
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">80</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">103</span>                      <span class="c1"># g
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">84</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">95</span>                       <span class="c1"># _
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">rax</span><span class="p">,</span> <span class="no">QWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-24</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">add</span>     <span class="no">rax</span><span class="p">,</span> <span class="mi">88</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">cmp</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">125</span>                      <span class="c1"># }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nf">jne</span>     <span class="no">.L2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">jmp</span>     <span class="no">.L3</span>
+</span></span><span class="line"><span class="cl"><span class="nl">.L2:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">eax</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nl">.L3:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span>     <span class="no">DWORD</span> <span class="no">PTR</span> <span class="p">[</span><span class="no">rbp-4</span><span class="p">],</span> <span class="no">eax</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">nop</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">pop</span>     <span class="no">rbp</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">ret</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>Phân tích source bài này thì thấy rõ ràng là một bài guessing :&gt; (? btc)</p>
+</li>
+<li>
+<p>Flag sẽ là: <strong>FLAG{<em>MXXbX0n_Sh1ning</em>}</strong> với X là các ký tự phải guessing.</p>
+</li>
+<li></li>
+</ul>
 
           
           
@@ -1337,7 +1538,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-08-21T00:00:00&#43;00:00">21 August 2024</time><span class="px-2 text-primary-500">&middot;</span><span>41 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2024-08-21T00:00:00&#43;00:00">21 August 2024</time><span class="px-2 text-primary-500">&middot;</span><span>7956 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">38 mins</span>
   
 
   
@@ -1586,7 +1787,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="http://localhost:50976/"
   style="z-index:500"
 >
   <div

@@ -24,7 +24,7 @@ showRelatedContent: false
 
 ❝Being the richest man in the cemetery does not matter to me … Going to bed at night saying we’ve done something wonderful … that’s what matters to me.❞
 
-Hi, I'm Minh Tri aka shr3wd.
+Hi, I'm Minh Tri aka **shr3wd**
 
 I am studying Computer Science at [VKU](https://vku.udn.vn).
 
