@@ -3,13 +3,19 @@ title: "ASCIS 2024 (Final)"
 description: "ASCIS CTF 2024 Final Writeup"
 summary: "ASCIS CTF 2024 Final Writeup"
 categories: ["Writeup"]
-tags: ["Web", "PWN", "Reverse", "Crypto", "Forensic"]
+tags: ["Web", "PWN", "Reverse"]
 #externalUrl: ""
 date: 2024-10-20
 draft: false
 authors:
   - shr3wd
 ---
+
+# Lời mở đầu
+
+- Giải SVATTT năm nay là năm thứ 2 mình tham gia. Nhờ may mắn và cố gắng của mọi người, team mình được đánh bảng A (Attack - Defense) ở vòng Chung khảo tại MTA (Mặc dù rất thích đánh Jeopardy ở bảng B :<)
+- Tuy nhiên, với khát khao được chơi Jeopardy, mình đã nhờ thành viên bảng B giữ đề để về ngâm cứu :>
+- Mình sẽ cố gắng solve hết tất cả các bài (hy vọng là được ^^)
 
 ## Misc
 
@@ -163,3 +169,157 @@ function checkFileMagic($fn) {
 - Check file magic: ở đây đoạn code sẽ check 8 byte đầu của file có khớp với các byte mà dev lập trình sẵn hay không ⇒ Có thể bypass bằng burp
 
 ⇒ Tổng hợp lại tất cả, lúc này chỉ cần upload một file php với các lớp bypass trên thì có thể RCE được server và đọc được flag.
+
+## Reverse
+
+### Calculator
+
+Bài này được cung cấp một file ASM => Hiểu logic mã asm hoặc chuyển thành một ngôn ngữ khác để dễ phân tích hơn.
+
+```asm
+fx:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-24], rdi
+        mov     rax, QWORD PTR [rbp-24]
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 70                         # F
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 4
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 76                         # L
+        jne     .L2 
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 8
+        mov     eax, DWORD PTR [rax]
+        add     eax, eax
+        cmp     eax, 130                        # A
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 12
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 71                         # G
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 16
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 123                        # {
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 20
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 95                         # _
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 24
+        mov     eax, DWORD PTR [rax]
+        sub     eax, 75                         # M
+        cmp     eax, 2
+        ja      .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 28
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 48                         # >= 0
+        jle     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 32
+        mov     eax, DWORD PTR [rax]            # >= d
+        cmp     eax, 100
+        jle     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 28
+        mov     edx, DWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 32
+        mov     eax, DWORD PTR [rax]
+        add     eax, edx
+        cmp     eax, 152                       # 
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 36
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 98                        # b
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 40                     
+        mov     eax, DWORD PTR [rax]
+        test    eax, eax                      # != 0
+        je      .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 44
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 48                       # 0
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 48
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 110                      # n
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 52
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 95                       # _
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 56
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 83                       # S
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 60
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 104                      # h
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 64
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 49                       # 1
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 68
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 110                      # n
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 72
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 105                      # i
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 76
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 110                      # n
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 80
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 103                      # g
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 84
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 95                       # _
+        jne     .L2
+        mov     rax, QWORD PTR [rbp-24]
+        add     rax, 88
+        mov     eax, DWORD PTR [rax]
+        cmp     eax, 125                      # }
+        jne     .L2
+        mov     eax, 1
+        jmp     .L3
+.L2:
+        mov     eax, 0
+.L3:
+        mov     DWORD PTR [rbp-4], eax
+        nop
+        pop     rbp
+        ret
+```
+
+- Phân tích source bài này thì thấy rõ ràng là một bài guessing :> (? btc)
+
+- Flag sẽ là: **FLAG{_MXXbX0n_Sh1ning_}** với X là các ký tự phải guessing.
+
+- Đồng đội của mình ở Bảng B đã solve được bài này, giờ server đóng rồi nên mình không test được cái nào là flag đúng.
+
